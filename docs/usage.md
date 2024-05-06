@@ -94,4 +94,4 @@ For more advanced usage, you can use the pi and ipfs properties of the PiPFS ins
 
 In this guide, you learned how to use PiPFS Hub to manage files on both the Pi Network and IPFS. You also learned how to interact with the Pi Network and IPFS, and how to pin CIDs to keep sensitive content censorship resistant.
 
-For more information, see the [API reference guide](docs/.
+For more information, see the [API reference guide](docs/api-reference.md).
