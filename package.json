@@ -1,0 +1,96 @@
+{
+  "name": "pipfs-hub-example",
+  "version": "1.0.0",
+  "description": "An example project that demonstrates the basic functionality of the PiPFS Hub",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "build": "node scripts/build.js",
+    "test": "node scripts/test.js",
+    "test:unit": "jest",
+    "test:integration": "jest --config jest.integration.config.js",
+    "lint": "eslint . --ext .js,.jsx",
+    "format": "prettier --write .",
+    "coverage": "jest --coverage",
+    "prepare": "npm run build && npm run test",
+    "precommit": "npm run lint && npm run format && npm run test:unit && npm run coverage",
+    "postinstall": "npx db-migrate up"
+  },
+  "dependencies": {
+    "ipfs-core": "^0.52.1",
+    "pi-network-sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.7",
+    "@babel/preset-react": "^7.14.5",
+    "@testing-library/jest-native": "^4.0.4",
+    "@testing-library/react-native": "^7.2.0",
+    "babel-jest": "^27.0.6",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-react": "^7.24.0",
+    "jest": "^27.0.6",
+    "jest-expo": "^42.0.1",
+    "prettier": "^2.4.1",
+    "react": "^17.0.1",
+    "react-native": "^0.64.2",
+    "react-test-renderer": "^17.0.1",
+    "webpack": "^5.38.1",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^4.3.1",
+    "db-migrate": "^0.11.0",
+    "db-migrate-pg": "^0.11.0",
+    "pg": "^8.7.1"
+  },
+  "jest": {
+    "preset": "jest-expo",
+    "setupFiles": [
+      "./node_modules/react-native-gesture-handler/jestSetup.js"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|react-clone-referenced-element|@react-native-community|expo(nent)?|@expo(nent)?/.*|react-navigation|@react-navigation/.*|@unimodules/.*|unimodules|sentry-expo|native-base)"
+    ]
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "plugins": [
+      "react",
+      "react-hooks"
+    ],
+    "rules": {
+      "react/prop-types": "off",
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn"
+    }
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KOSASIH/pipfs-hub-example.git"
+  },
+  "keywords": [
+    "ipfs",
+    "p2p",
+    "blockchain",
+    "decentralized",
+    "web3"
+  ],
+  "author": "KOSASIH",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KOSASIH/pipfs-hub-example/issues"
+  },
+  "homepage": "https://github.com/KOSASIH/pipfs-hub-example#readme"
+}
