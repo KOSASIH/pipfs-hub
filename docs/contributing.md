@@ -21,3 +21,20 @@ To check your code for style issues, run the following command:
 
 ```bash
 npm run lint
+```
+
+To automatically fix style issues, run the following command:
+
+```
+npm run lint:fix
+```
+
+We use Jest as the testing framework.
+
+# Code of Conduct
+
+PiPFS Hub is committed to fostering a welcoming and inclusive community. Please review our Code of Conduct before contributing.
+
+# License
+
+PiPFSHub is released under the MIT License.
