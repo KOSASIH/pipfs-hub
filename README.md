@@ -21,10 +21,10 @@ PiPFS Hub includes the following features:
 
 To get started with PiPFS Hub, follow these steps:
 
-1. **Install the project**: Follow the instructions in the [installation guide](installation.md) to install PiPFS Hub.
-2. **Set up the project**: Follow the instructions in the [usage guide](usage.md) to set up PiPFS Hub.
-3. **Explore the API**: Follow the instructions in the [API reference guide](api-reference.md) to learn more about the PiPFS Hub API.
-4. **Contribute to the project**: Follow the instructions in the [contributing guide](contributing.md) to learn how you can contribute to PiPFS Hub.
+1. **Install the project**: Follow the instructions in the [installation guide](docs/installation.md) to install PiPFS Hub.
+2. **Set up the project**: Follow the instructions in the [usage guide](docs/usage.md) to set up PiPFS Hub.
+3. **Explore the API**: Follow the instructions in the [API reference guide](docs/api-reference.md) to learn more about the PiPFS Hub API.
+4. **Contribute to the project**: Follow the instructions in the [contributing guide](docs/contributing.md) to learn how you can contribute to PiPFS Hub.
 
 ## Directory Structure
 
