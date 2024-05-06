@@ -25,7 +25,7 @@ Once you have created a new instance of the PiPFS class, you can use it to inter
 
 To interact with the Pi Network, you can use the pi property of the PiPFS instance. Here's an example:
 
-```
+```javascript
 1. const { PiPFS } = require('pipfs-hub');
 2. 
 3. const pipfs = new PiPFS();
@@ -44,7 +44,7 @@ To interact with the Pi Network, you can use the pi property of the PiPFS instan
 
 To interact with IPFS, you can use the ipfs property of the PiPFS instance. Here's an example:
 
-```
+```javascript
 1. const { PiPFS } = require('pipfs-hub');
 2. 
 3. const pipfs = new PiPFS();
@@ -63,7 +63,7 @@ To interact with IPFS, you can use the ipfs property of the PiPFS instance. Here
 
 To keep sensitive content censorship resistant, you can use the pin method of the PiPFS instance to pin CIDs. Here's an example:
 
-```
+```javascript
 1. const { PiPFS } = require('pipfs-hub');
 2. 
 3. const pipfs = new PiPFS();
@@ -78,7 +78,7 @@ To keep sensitive content censorship resistant, you can use the pin method of th
 # Advanced Usage
 For more advanced usage, you can use the pi and ipfs properties of the PiPFS instance to access the underlying Pi Network SDK and IPFS JavaScript library. Here's an example:
 
-```
+```javascript
 1. const { PiPFS } = require('pipfs-hub');
 2. 
 3. const pipfs = new PiPFS();
