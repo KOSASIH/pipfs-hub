@@ -1,19 +1,22 @@
 # Import necessary libraries
+import time
+
 import gym
 import pybullet as p
-import time
 import pybullet_data
 
 # Define a class for simulation environments
+
+
 class SimulationEnvironment:
     def __init__(self, config_path):
         # Load configuration from file
         with open(config_path) as f:
-           config = json.load(f)
+            config = json.load(f)
         self.config = config
 
         # Initialize the simulation environment
-        self.simulation = gym.make(self.config['simulation']['name'])
+        self.simulation = gym.make(self.config["simulation"]["name"])
 
     def reset(self):
         # Reset the simulation environment
@@ -38,5 +41,5 @@ class SimulationEnvironment:
         p.connect(p.GUI)
         p.setAdditionalSearchPath(pybullet_data.getDataPath())
         p.setGravity(0, 0, -10)
-        p.setTimeStep(1./240.)
+        p.setTimeStep(1.0 / 240.0)
         p.setRealTimeSimulation(1)
