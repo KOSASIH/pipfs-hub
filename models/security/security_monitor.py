@@ -1,11 +1,14 @@
 # Import necessary libraries
-import os
-import time
 import logging
+import os
 import socket
+import time
+
 import pyrebase
 
 # Define a class for system security monitoring
+
+
 class SecurityMonitor:
     def __init__(self, config_path):
         # Load configuration from file
@@ -14,10 +17,10 @@ class SecurityMonitor:
         self.config = config
 
         # Initialize logging
-        logging.basicConfig(filename=self.config['logging']['file'], level=logging.INFO)
+        logging.basicConfig(filename=self.config["logging"]["file"], level=logging.INFO)
 
         # Initialize firebase
-        self.firebase = pyrebase.initialize_app(self.config['firebase'])
+        self.firebase = pyrebase.initialize_app(self.config["firebase"])
 
     def intrusion_detection(self):
         # Implement intrusion detection logic
@@ -25,7 +28,7 @@ class SecurityMonitor:
             # Check for unauthorized access attempts
             if self.check_unauthorized_access():
                 # Log the intrusion attempt
-                logging.info('Intrusion detected')
+                logging.info("Intrusion detected")
 
                 # Notify the administrator
                 self.notify_administrator()
@@ -51,10 +54,10 @@ class SecurityMonitor:
                 # Grant or deny access based on the request
                 if self.grant_access():
                     # Log the access grant
-                    logging.info('Access granted')
+                    logging.info("Access granted")
                 else:
                     # Log the access denial
-                    logging.info('Access denied')
+                    logging.info("Access denied")
 
             # Sleep for a while
             time.sleep(1)
