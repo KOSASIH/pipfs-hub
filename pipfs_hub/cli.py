@@ -1,5 +1,7 @@
 import argparse
+
 from pipfs_hub.fs import list_packages
+
 
 def main() -> None:
     """Entry point for the pipfs-hub CLI."""
