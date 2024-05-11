@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+
 def visualize_data(data):
     # Visualize data using Matplotlib or Seaborn
     # For example, plot histograms, scatter plots, or heatmaps
@@ -10,10 +11,10 @@ def visualize_data(data):
     plt.show()
 
     # Plot scatter plots
-    sns.pairplot(data, hue='class', height=2.5)
+    sns.pairplot(data, hue="class", height=2.5)
     plt.show()
 
     # Plot heatmaps
     correlation_matrix = data.corr()
-    sns.heatmap(correlation_matrix, annot=True, cmap='coolwarm', linewidths=0.5)
+    sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", linewidths=0.5)
     plt.show()
