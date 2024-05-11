@@ -180,3 +180,7 @@ name = "swift-format"
 [[analyzers]]
 name = "dart-analyze"
 type = "community"
+
+[[analyzers]]
+name = "dart-analyze"
+type = "community"
