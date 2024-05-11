@@ -1,5 +1,6 @@
 import cv2
 
+
 def process_video(video_path, config):
     # Perform video processing using the specified configuration
     # For example, extract frames or apply a filter
@@ -17,10 +18,19 @@ def process_video(video_path, config):
             break
 
         # Apply a filter
-        filtered_frame = cv2.GaussianBlur(frame, (config['filter_size'], config['filter_size']), config['filter_sigma'])
+        filtered_frame = cv2.GaussianBlur(
+            frame,
+            (config["filter_size"], config["filter_size"]),
+            config["filter_sigma"],
+        )
 
         # Write the filtered frame to a new video file
-        out = cv2.VideoWriter('filtered_' + video_path, cv2.VideoWriter_fourcc(*'XVID'), frame_rate, (frame_width, frame_height))
+        out = cv2.VideoWriter(
+            "filtered_" + video_path,
+            cv2.VideoWriter_fourcc(*"XVID"),
+            frame_rate,
+            (frame_width, frame_height),
+        )
         out.write(filtered_frame)
         out.release()
 
