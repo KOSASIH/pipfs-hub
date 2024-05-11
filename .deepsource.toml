@@ -176,3 +176,7 @@ name = "scalafmt"
 
 [[transformers]]
 name = "swift-format"
+
+[[analyzers]]
+name = "dart-analyze"
+type = "community"
