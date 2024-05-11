@@ -1,5 +1,6 @@
 import serial
 
+
 def open_serial_port(port, baudrate):
     # Open a serial port using PySerial or PyVISA
 
@@ -7,10 +8,12 @@ def open_serial_port(port, baudrate):
 
     return ser
 
+
 def send_serial_data(ser, data):
     # Send data over a serial port
 
     ser.write(data.encode())
+
 
 def receive_serial_data(ser):
     # Receive data over a serial port
