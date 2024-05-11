@@ -1,10 +1,12 @@
 # Import necessary libraries
-import pandas as pd
-import numpy as np
 import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
 import seaborn as sns
 
 # Define a class for data analysis and visualization
+
+
 class DataAnalytics:
     def __init__(self, data_path):
         # Load data from file
@@ -17,7 +19,7 @@ class DataAnalytics:
     def correlation_matrix(self):
         # Compute the correlation matrix for the data
         corr = self.data.corr()
-        sns.heatmap(corr, annot=True, cmap='coolwarm')
+        sns.heatmap(corr, annot=True, cmap="coolwarm")
         plt.show()
 
     def scatter_plot(self, x_column, y_column):
@@ -29,15 +31,15 @@ class DataAnalytics:
 
     def bar_plot(self, column):
         # Create a bar plot for a column of the data
-        self.data[column].value_counts().plot(kind='bar')
+        self.data[column].value_counts().plot(kind="bar")
         plt.xlabel(column)
-        plt.ylabel('Count')
+        plt.ylabel("Count")
         plt.show()
 
     def line_plot(self, column):
         # Create a line plot for a column of the data
         plt.plot(self.data[column])
-        plt.xlabel('Index')
+        plt.xlabel("Index")
         plt.ylabel(column)
         plt.show()
 
@@ -45,5 +47,5 @@ class DataAnalytics:
         # Create a histogram plot for a column of the data
         plt.hist(self.data[column])
         plt.xlabel(column)
-        plt.ylabel('Count')
+        plt.ylabel("Count")
         plt.show()

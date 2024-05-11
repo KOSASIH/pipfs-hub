@@ -1,16 +1,18 @@
 # Import necessary libraries
-import paho.mqtt.client as mqtt
 import coapthon.client as coap
+import paho.mqtt.client as mqtt
 import requests
 
 # Define a class for device communication
+
+
 class DeviceCommunication:
     def __init__(self, device_config):
         # Initialize device communication protocol
-        self.protocol = device_config['protocol']
-        self.host = device_config['host']
-        self.port = device_config['port']
-        self.topic = device_config['topic']
+        self.protocol = device_config["protocol"]
+        self.host = device_config["host"]
+        self.port = device_config["port"]
+        self.topic = device_config["topic"]
 
     def mqtt_publish(self, message):
         # Publish a message using MQTT protocol
@@ -36,14 +38,18 @@ class DeviceCommunication:
     def coap_get(self, resource):
         # Get a resource using CoAP protocol
         client = coap.Client()
-        client.uri_format = 'coap://{host}:{port}/{resource}'.format(host=self.host, port=self.port, resource=resource)
+        client.uri_format = "coap://{host}:{port}/{resource}".format(
+            host=self.host, port=self.port, resource=resource
+        )
         response = client.get()
         return response.payload
 
     def coap_put(self, resource, payload):
         # Put a payload to a resource using CoAP protocol
         client = coap.Client()
-        client.uri_format = 'coap://{host}:{port}/{resource}'.format(host=self.host, port=self.port, resource=resource)
+        client.uri_format = "coap://{host}:{port}/{resource}".format(
+            host=self.host, port=self.port, resource=resource
+        )
         response = client.put(payload)
         return response.payload
 
