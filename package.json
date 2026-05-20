@@ -38,7 +38,7 @@
     "react-test-renderer": "^17.0.1",
     "webpack": "^5.38.1",
     "webpack-cli": "^4.7.2",
-    "webpack-dev-server": "^4.3.1",
+    "webpack-dev-server": "^5.2.4",
     "db-migrate": "^0.11.0",
     "db-migrate-pg": "^0.11.0",
     "pg": "^8.7.1"
